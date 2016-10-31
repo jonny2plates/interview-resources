@@ -1,0 +1,9 @@
+Under what condition could the code sample below crash your application? 
+How would you modify the code to avoid this potential problem? 
+Explain your answer.
+
+ Intent sendIntent = new Intent();
+    sendIntent.setAction(Intent.ACTION_SEND);
+    sendIntent.putExtra(Intent.EXTRA_TEXT, textMessage);
+    sendIntent.setType(HTTP.PLAIN_TEXT_TYPE); // "text/plain" MIME type
+    startActivity(sendIntent);
